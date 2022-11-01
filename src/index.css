@@ -1,13 +1,227 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+:root{
+    --color01 : #222222;
+    --color02 : #E50914;
+    --color03 : #ffffff;
+    --color04 : #FEFBF6;
+}
+body{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: var(--color01);
+}
+#root{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#root .cards_list{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px,1fr));
+    place-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#root .card_div{
+    width: 90%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#root .card_div .container{
+    width: 95%;
+    height: 90%;
+    background: rgba(225, 225, 225, .1);
+    border-top:1px solid rgba(240, 52, 52, .2);
+    border-right: 1px solid rgba(240, 52, 52, .2);
+    padding: 15px;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+}
+#root .card_div .container:hover{
+    height: 93%;
+}
+#root .card_div .card_image {
+    width: 100%;
+    height: 80%;
+}
+#root .card_div .card_image img{
+    width: 100%;
+    height: 100%;;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root .card_div .card_text{
+    width: 100%;
+    height: 20%;
+    color: var(--color03);
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    gap: 2px;
+}
+#root .card_div .card_text .heading p{
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    opacity: .6;
+}
+#root .card_div .card_text .name p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#root .card_div .card_text .btn{
+    padding-top: 10px;
+}
+#root .card_div .card_text button{
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    background: var(--color02);
+    color: var(--color01);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+.heading_div{
+    width: 100%;
+    height: 100px;
+    background: var(--color04);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-transform: capitalize;
+}
+.heading_div h1{
+    font-size: clamp(16px, 3vw, 32px);
+    opacity: .8;
+}
+
+.note_div{
+    width: 100%;
+    height: auto;
+    background: var(--color04);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.note_div .container{
+    width: 80%;
+    height: 100%;
+    padding: 50px 20px 50px 20px;
+}
+.note_div .container .box.note_text_one p{
+    font-size: 20px;
+}
+.note_div .container .box.note_text_one p span{
+    font-size: 19px;
+    text-decoration: underline;
+    font-weight: bolder;
+    color: var(--color02);
+}
+.note_div .container .box.note_text_two{
+    padding-top: 15px;
+}
+.note_div .container .box.note_text_two h1{
+    font-size: 35px;
+    width: fit-content;
+}
+.note_text_two .copy_email{
+    height: 2.5rem;
+}
+.copy_email .box{
+    max-width: 450px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr .1fr;
+    place-items: center;
+}
+.copy_email .box .sec{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.copy_email .box .sec.emailSec{
+    justify-content: flex-start;
+}
+.copy_email .box .sec.emailSec input{
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    letter-spacing: .13rem;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    outline: none;
+    background: var(--color01);
+    color: var(--color04);
+}
+.copy_email .box .sec.iconSec{
+    background: var(--color02);
+    color: var(--color01);
+    cursor: pointer;
+}
+.copy_email .box .sec.iconSec .icon{
+    font-size: 1.3rem;
+    padding: 0px 20px 0px 20px;
+}
+
+.socail_media{
+    width: auto;
+    height: auto;
+}
+.socail_media ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding-top: 10px;
+}
+.socail_media ul li{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid var(--color01);
+}
+.socail_media ul li a{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    transition: .3s all ease-in-out;
+}
+.socail_media ul li a svg{
+    font-size: 30px;
+    color: var(--color01);
+    transition: .3s all ease-in-out;
+}
+.socail_media ul li a:hover svg{
+    color: var(--color04);
+}
+.socail_media ul li a:hover{
+    background: var(--color01);
 }
