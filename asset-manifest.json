@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/netflix_movie_list/static/css/main.a494af4a.css",
+    "main.js": "/netflix_movie_list/static/js/main.b14d8d61.js",
+    "index.html": "/netflix_movie_list/index.html",
+    "main.a494af4a.css.map": "/netflix_movie_list/static/css/main.a494af4a.css.map",
+    "main.b14d8d61.js.map": "/netflix_movie_list/static/js/main.b14d8d61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a494af4a.css",
+    "static/js/main.b14d8d61.js"
+  ]
+}
